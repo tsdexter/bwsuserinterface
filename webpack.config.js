@@ -60,6 +60,12 @@ const clientEntrypoints = [
     filename: 'sidebar-about-page',
     template: './src/client/sidebar-about-page/index.html',
   },
+  {
+    name: 'CLIENT - Web App',
+    entry: './src/client/web-app/index.js',
+    filename: 'web-app', // we'll add the .html suffix to these
+    template: './src/client/web-app/index.html',
+  },
 ];
 
 // define certificate locations
@@ -134,7 +140,7 @@ const clientConfig = {
       // we could add support for scss here
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader'],
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
       },
     ],
   },
